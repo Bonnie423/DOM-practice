@@ -24,10 +24,10 @@ export default function App() {
     })
   }
 
-  function toggleToDo(id, compeleted) {
+  function toggleToDo(id) {
     setToDos((currentTodos) => {
       return currentTodos.map((todo) => {
-        if (todo.id === id) return { ...todo, compeleted }
+        if (todo.id === id) return { ...todo, compeleted: !todo.compeleted }
         return todo
       })
     })
